@@ -4,7 +4,13 @@ class MessageController extends Controller
 {
 	public function actionHelloWorld()
 	{
-		$this->render('helloWorld');
+		$theTime = date("D M j G:i:s T Y");
+		$this->render('helloWorld', array('time' => $theTime, 'goodbye' => "index.php?r=message/goodbye"));
+	}
+
+	public function actionGoodbye()
+	{
+		$this->render('goodbye');
 	}
 
 	public function actionIndex()

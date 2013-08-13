@@ -1,0 +1,80 @@
+2013/08/13 00:44:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/alejo8591/Sites/yiitest/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/alejo8591/Sites/yiitest/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Users/alejo8591/Sites/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/alejo8591/Sites/yiitest/trackstart/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alejo8591/yiitest/trackstart/index.php?r=gii
+---
+2013/08/13 00:45:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/alejo8591/Sites/yiitest/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/alejo8591/Sites/yiitest/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Users/alejo8591/Sites/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/alejo8591/Sites/yiitest/trackstart/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alejo8591/yiitest/trackstart/index.php?r=gii
+---
+2013/08/13 00:46:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/alejo8591/Sites/yiitest/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/alejo8591/Sites/yiitest/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Users/alejo8591/Sites/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/alejo8591/Sites/yiitest/trackstart/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alejo8591/yiitest/trackstart/index.php?r=gii
+---
+2013/08/13 00:46:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/alejo8591/Sites/yiitest/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/alejo8591/Sites/yiitest/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Users/alejo8591/Sites/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/alejo8591/Sites/yiitest/trackstart/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alejo8591/yiitest/trackstart/index.php?r=gii
+---
+2013/08/13 00:47:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/alejo8591/Sites/yiitest/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/alejo8591/Sites/yiitest/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Users/alejo8591/Sites/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/alejo8591/Sites/yiitest/trackstart/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alejo8591/yiitest/trackstart/index.php?r=gii
+---
+2013/08/13 00:48:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/alejo8591/Sites/yiitest/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/alejo8591/Sites/yiitest/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/alejo8591/Sites/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /Users/alejo8591/Sites/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/alejo8591/Sites/yiitest/trackstart/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alejo8591/yiitest/trackstart/index.php?r=gii
+---
+2013/08/13 00:54:38 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 00:55:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.tbl_project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 00:55:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 00:58:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 00:58:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 01:03:38 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.tbl_project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 01:11:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.tbl_project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 01:12:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.tbl_project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 01:18:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.Project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)
+2013/08/13 01:24:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstart.project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `project`.
+in /Users/alejo8591/Sites/yiitest/trackstart/index.php (13)

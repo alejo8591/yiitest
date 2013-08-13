@@ -1,4 +1,5 @@
 <?php
+require_once('/Applications/MAMP/htdocs/yiitest/demo/protected/tests/WebTestCase.php');
 
 class SiteTest extends WebTestCase
 {

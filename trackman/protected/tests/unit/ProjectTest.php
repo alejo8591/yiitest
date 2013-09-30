@@ -4,10 +4,10 @@ class ProjectTest extends CDbTestCase
 	public $fixtures=array(
 		'projects' => 'Project',
 	);
-	
-	public function testCRUD()
+
+	public function testCreate()
 	{
-		// Create a new project
+		// CREATE a new project
 		$newProject = new Project;
 		$newProjectName = 'Test Project 1';
 		$newProject->setAttributes(
@@ -28,10 +28,35 @@ class ProjectTest extends CDbTestCase
 		$this->assertTrue($retreiveProject instanceof Project);
 		$this->assertEquals($newProjectName, $retreiveProject->name);
 
+	}
+
+	public function testRead()
+	{
+		$retreivedProject= $this->projects('project1');
+		$this->assertTrue($retreivedProject instanceof Project);
+		$this->assertEquals('Test Project 1', $retreivedProject->name);
+	}
+
+	public function testUpdate()
+	{
+		$project = $this->projects('project4');
+		$updatedProjectName = 'Updated Test Project 2';
+		$project->name = $updatedProjectName;
+		$this->assertTrue($project->save(false));
+		// READ back the record
+		$updatedProject = Project::model()->findByPk($project->id);
+		$this->assertTrue($updatedProject instanceof Project);
+		$this->assertEquals($updatedProjectName, $updatedProject->name);
+
+	}
+
+	public function testDelete()
+	{
 		//DELETE the project
-		$newProjectId = $newProject->id;
-		$this->assertTrue($newProject->delete());
-		$deletedProject=Project::model()->findByPk($newProjectId);
+		$project = $this->projects('project3');
+		$savedProjectId = $project->id;
+		$this->assertTrue($project->delete());
+		$deletedProject=Project::model()->findByPk($savedProjectId);
 		$this->assertEquals(NULL,$deletedProject);
 	}
 }

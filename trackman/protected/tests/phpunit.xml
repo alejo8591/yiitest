@@ -6,7 +6,7 @@
 		stopOnFailure="false">
 
 	<selenium>
-		<browser name="Firefox" browser="*firefox /Applications/Firefox.app/Contents/MacOS/firefox-bin" />
+		<browser name="Firefox" browser="*firefox" />
 	</selenium>
 
 </phpunit>

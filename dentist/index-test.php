@@ -5,8 +5,8 @@
  */
 
 // change the following paths if necessary
-$yii='/Applications/MAMP/htdocs/yiitest/yii/framework/yii.php';
-$config='/Applications/MAMP/htdocs/yiitest/demo/protected/config/test.php';
+$yii=dirname(__FILE__).'/../yii/framework/yii.php';
+$config=dirname(__FILE__).'/protected/config/test.php';
 
 // remove the following line when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',true);

@@ -1,0 +1,72 @@
+2013/09/17 13:21:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 13:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 13:26:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 13:38:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 13:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 13:43:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 13:53:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 14:57:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=gii
+---
+2013/09/17 15:01:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/admin".' in /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/MAMP/htdocs/yiitest/dentist/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiitest/dentist/index.php?r=user/admin
+---

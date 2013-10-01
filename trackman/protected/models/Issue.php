@@ -25,6 +25,25 @@
 class Issue extends CActiveRecord
 {
 	/**
+ 	 * const drop-down for type menu
+     * @property TYPE_BUG for bug type
+ 	 * @property TYPE_FEATURE for feature type 
+ 	 * @property TYPE_TASK for task type
+	*/
+	const TYPE_BUG = 0;
+	const TYPE_FEATURE = 1;
+	const TYPE_TASK = 2;
+	/**
+ 	 * const drop-down for status menu
+     * @property STATUS_NOT_YET_STARTER for not yes started status
+ 	 * @property STATUS_STARTED for started status 
+ 	 * @property STATUS_FINISHED for for finished status
+	*/
+	const STATUS_NOT_YET_STARTER = 0;
+	const STATUS_STARTED = 1;
+	const STATUS_FINISHED = 2;
+
+	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -131,5 +150,28 @@ class Issue extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	/**
+	* @return array issue type names indexed by type IDs
+	*/
+	public function getTypeOptions()
+	{
+		return array(
+			self::TYPE_BUG => 'Bug',
+			self::TYPE_FEATURE =>'Feature',
+			self::TYPE_TASK => 'Task',
+		);
+	}
+	/**
+	* @return array issue status names indexed by type IDs
+	*/
+	public function getStatusOptions()
+	{
+		return array(
+			self::STATUS_NOT_YET_STARTER => 'Not Yet Started',
+			self::STATUS_STARTED =>'Started',
+			self::STATUS_FINISHED => 'Finished',
+		);
 	}
 }

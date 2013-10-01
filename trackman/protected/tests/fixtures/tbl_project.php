@@ -1,7 +1,7 @@
 <?php
 
-/*
-	fixtures for tbl_project
+/**
+ *	@return fixtures for tbl_project
 */
 
 return array(

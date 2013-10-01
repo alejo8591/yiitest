@@ -22,7 +22,6 @@ CREATE  TABLE IF NOT EXISTS `trackman`.`tbl_project` (
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB AUTO_INCREMENT = 1;
 
-
 -- -----------------------------------------------------
 -- Table `trackman`.`tbl_user`
 -- -----------------------------------------------------
@@ -81,7 +80,6 @@ CREATE  TABLE IF NOT EXISTS `trackman`.`tbl_issue` (
     ON DELETE CASCADE
     ON UPDATE RESTRICT)
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `trackman`.`tbl_project_user_assignment`

@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Create Project', 'url'=>array('create')),
 	array('label'=>'Manage Project', 'url'=>array('admin')),
+	array('label'=>'Create Issue', 'url'=>array('issue/create', 'pid'=>1)),
 );
 ?>
 

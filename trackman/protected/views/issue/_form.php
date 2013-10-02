@@ -26,9 +26,11 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
+		<!-- <?php echo $form->labelEx($model,'description'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
-		<?php echo $form->error($model,'description'); ?>
+		<?php echo $form->error($model,'description'); ?> -->
+
+		<?php echo $form->hiddenField($model,'project_id'); ?>
 	</div>
 
 	<div class="row">

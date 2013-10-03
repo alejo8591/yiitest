@@ -212,4 +212,13 @@ class IssueController extends Controller
 		// complete the running of the other filters and execute request action
 		$filterChain->run();
 	}
+
+	/**
+	 * Returns the project model instance to which this issue belongs
+	 */
+	public function getProject()
+	{
+		return $this->_project;
+	}
+
 }

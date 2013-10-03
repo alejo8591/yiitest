@@ -45,8 +45,19 @@ class Project extends CActiveRecord
 	 */
 	public function relations()
 	{
+		/*
+		//create the Project model instance by primary key:
+   		$model = Project::model()->findbyPk(1);
+   		//get an array of all associated Issue AR instances
+   		$allIssues = $model->issues;
+   		//get an array of all associated User AR instance
+   		$allUsers = $model->users;
+   		//get the User AR instance representing the owner of
+   		//the first issue associated with this project
+   		$ownerOfFirstIssue = $model->issues[0]->owner;
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
+		*/
 		return array(
 			  'issues' => array(self::HAS_MANY, 'Issue', 'project_id'),
                'users' => array(self::MANY_MANY, 'User', 'tbl_project_user_assignment(project_id, user_id)'),
@@ -109,5 +120,14 @@ class Project extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	/**
+	 * @return array of valid user for this project, indexed by user IDs
+	 */
+	public function getUserOptions()
+	{
+		$userArray = CHtml::listData($this->users, 'id', 'username');
+		return $userArray;
 	}
 }

@@ -32,6 +32,17 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('update_user_id')); ?>:</b>
 	<?php echo CHtml::encode($data->update_user_id); ?>
 	<br />
+</div>
 
+<div class="view">
+	<b><?php echo CHtml::encode($data->getAttributeLabel('name'));
+	?>:</b>
+	<b><?php echo CHtml::encode($data->name), array('issue/view', 'id'=>$data->id);
+	?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('description'));
+	?>:</b>
+	<b><?php echo CHtml::encode($data->description);
+	?>:</b>
+	<br />
 
 </div>

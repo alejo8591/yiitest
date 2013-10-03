@@ -7,6 +7,10 @@ class ProjectController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	/**
+	 * @var CActiveRecord the currently loaded data model instance.
+	 */
+	private $_model;
 
 	/**
 	 * @return array action filters
@@ -49,10 +53,21 @@ class ProjectController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView()
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+		$issueDataProvider = new CActiveDataProvider('Issue', array(
+				'criteria' => array(
+					'condition' => 'project_id =:projectId',
+					'params' => array(':projectId' => $this->loadModel()->id),
+				),
+				'pagination' => array(
+					'pageSize' => 1,
+				),
+			));
+
+		$this->render('view', array(
+			'model'=>$this->loadModel(),
+			'issueDataProvider' => $issueDataProvider,
 		));
 	}
 
@@ -150,12 +165,25 @@ class ProjectController extends Controller
 	 * @return Project the loaded model
 	 * @throws CHttpException
 	 */
+	/*
 	public function loadModel($id)
 	{
 		$model=Project::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
+	} */
+
+	public function loadModel()
+	{
+		if($this->_model===null)
+		{
+			if(isset($_GET['id']))
+				$this->_model=Project::model()->findbyPk($_GET['id']);
+			if($this->_model===null)
+				throw new CHttpException(404,'The requested page does not exist.');
+		}
+		return $this->_model;
 	}
 
 	/**

@@ -685,3 +685,61 @@ REQUEST_URI=/yiitest/trackman/index.php?r=project/view&id=1
 in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/ProjectController.php (183)
 in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/ProjectController.php (61)
 in /Applications/MAMP/htdocs/yiitest/trackman/index.php (13)
+2013/10/02 21:01:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`trackman`.`tbl_issue`, CONSTRAINT `fk_issue_project` FOREIGN KEY (`id`) REFERENCES `tbl_project` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_issue` (`project_id`, `name`, `type_id`, `status_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php (80)
+in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php (213)
+in /Applications/MAMP/htdocs/yiitest/trackman/index.php (13)
+2013/10/02 21:01:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`trackman`.`tbl_issue`, CONSTRAINT `fk_issue_project` FOREIGN KEY (`id`) REFERENCES `tbl_project` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_issue` (`project_id`, `name`, `type_id`, `status_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /Applications/MAMP/htdocs/yiitest/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php(80): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/yiitest/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#4 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php(213): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#17 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Applications/MAMP/htdocs/yiitest/trackman/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiitest/trackman/index.php?r=issue/create&pid=3
+HTTP_REFERER=http://localhost:8888/yiitest/trackman/index.php?r=issue/create&pid=3
+---
+2013/10/02 21:01:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`trackman`.`tbl_issue`, CONSTRAINT `fk_issue_project` FOREIGN KEY (`id`) REFERENCES `tbl_project` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_issue` (`project_id`, `name`, `type_id`, `status_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php (80)
+in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php (213)
+in /Applications/MAMP/htdocs/yiitest/trackman/index.php (13)
+2013/10/02 21:01:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`trackman`.`tbl_issue`, CONSTRAINT `fk_issue_project` FOREIGN KEY (`id`) REFERENCES `tbl_project` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `tbl_issue` (`project_id`, `name`, `type_id`, `status_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /Applications/MAMP/htdocs/yiitest/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php(80): CActiveRecord->save()
+#3 /Applications/MAMP/htdocs/yiitest/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#4 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php(213): CFilterChain->run()
+#7 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#8 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#17 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Applications/MAMP/htdocs/yiitest/trackman/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiitest/trackman/index.php?r=issue/create&pid=3
+HTTP_REFERER=http://localhost:8888/yiitest/trackman/index.php?r=issue/create&pid=3
+---

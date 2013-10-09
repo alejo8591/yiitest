@@ -22,7 +22,7 @@
  * @property User $owner
  * @property User $requester
  */
-class Issue extends CActiveRecord
+class Issue extends TrackmanActiveRecord
 {
 	/**
  	 * const drop-down for type menu

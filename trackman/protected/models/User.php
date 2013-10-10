@@ -22,6 +22,11 @@
 class User extends TrackmanActiveRecord
 {
 	/**
+	 * @value string the associated database table name
+	 */
+	public $password_repeat;
+
+	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -37,11 +42,13 @@ class User extends TrackmanActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('email', 'required'),
+			array('email, username, password, password_repeat', 'required'),
 			// array('create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
+			array('email username', 'unique' ),
+			// repeat password validate
+			array('password', 'compare'),
 			array('email, username, password', 'length', 'max'=>256),
-			array('last_login_time, create_time, update_time', 'safe'),
-			array('email', 'username', 'unique'),
+			array('last_login_time, create_time, update_time, password_repeat', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, email, username, password, last_login_time, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),

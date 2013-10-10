@@ -21,5 +21,20 @@ abstract class TrackmanActiveRecord extends CActiveRecord
 		}
 	    return parent::beforeValidate();
 	}
+
+	/**
+	 * Performs the AJAX validation.
+	 * @param password for encryption in md5
+	 */	
+	protected function afterValidate()
+	{
+		parent::afterValidate();
+		$this->password = $this->encrypt($this->password);
+	}
+
+	protected function encrypt($value){
+		return md5 ($value);
+	}
+	
 }
 ?>

@@ -1,10 +1,7 @@
 <?php
 abstract class TrackmanActiveRecord extends CActiveRecord
-{
-	/**
-	 * Prepares create_time, create_user_id, update_time and update_user_id
-	 */
-}
+{ 
+     /*
 	 * Prepare create_time, create_user_id, update_time and update_user_id
 	 * attributes before performing validation.
 	 */
@@ -24,20 +21,5 @@ abstract class TrackmanActiveRecord extends CActiveRecord
 		}
 	    return parent::beforeValidate();
 	}
-
-	/**
-	 * Performs the AJAX validation.
-	 * @param password for encryption in md5
-	 */	
-	protected function afterValidate()
-	{
-		parent::afterValidate();
-		$this->password = $this->encrypt($this->password);
-	}
-
-	protected function encrypt($value){
-		return md5 ($value);
-	}
-	
 }
 ?>

@@ -130,4 +130,19 @@ class User extends TrackmanActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	/**
+	 * Performs the AJAX validation.
+	 * @param password for encryption in md5
+	 */	
+	protected function afterValidate()
+	{
+		parent::afterValidate();
+		$this->password = $this->encrypt($this->password);
+	}
+
+	public function encrypt($value){
+		return md5($value);
+	}
+
 }

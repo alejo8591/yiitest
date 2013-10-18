@@ -2,11 +2,9 @@
 abstract class TrackmanActiveRecord extends CActiveRecord
 {
 	/**
-<<<<<<< HEAD
 	 * Prepares create_time, create_user_id, update_time and update_user_id
 	 */
 }
-=======
 	 * Prepare create_time, create_user_id, update_time and update_user_id
 	 * attributes before performing validation.
 	 */
@@ -43,4 +41,3 @@ abstract class TrackmanActiveRecord extends CActiveRecord
 	
 }
 ?>
->>>>>>> f7a52e989494ff77e0d15b87768c951c04189413

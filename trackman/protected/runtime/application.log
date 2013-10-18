@@ -743,3 +743,60 @@ Stack trace:
 REQUEST_URI=/yiitest/trackman/index.php?r=issue/create&pid=3
 HTTP_REFERER=http://localhost:8888/yiitest/trackman/index.php?r=issue/create&pid=3
 ---
+2013/10/02 21:10:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The request Project does not exist' in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php:193
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php(211): IssueController->loadProject(NULL)
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#10 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#11 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yiitest/trackman/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitest/trackman/index.php?r=issue/create
+HTTP_REFERER=http://localhost:8888/yiitest/trackman/index.php?r=issue
+---
+2013/10/02 22:28:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The request Project does not exist' in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php:200
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php(218): IssueController->loadProject(NULL)
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#10 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/index')
+#11 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yiitest/trackman/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitest/trackman/index.php?r=issue/index
+HTTP_REFERER=http://localhost:8888/yiitest/trackman/index.php?r=issue/create&pid=1
+---
+2013/10/02 22:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The request Project does not exist' in /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php:200
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiitest/trackman/protected/controllers/IssueController.php(218): IssueController->loadProject(NULL)
+#1 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/MAMP/htdocs/yiitest/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#10 /Applications/MAMP/htdocs/yiitest/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/index')
+#11 /Applications/MAMP/htdocs/yiitest/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Applications/MAMP/htdocs/yiitest/trackman/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitest/trackman/index.php?r=issue/index
+HTTP_REFERER=http://localhost:8888/yiitest/trackman/index.php?r=issue/create&pid=2
+---

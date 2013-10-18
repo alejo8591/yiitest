@@ -25,10 +25,10 @@ $this->menu=array(
 		'id',
 		'name',
 		'description',
-		'create_time',
-		'create_user_id',
-		'update_time',
-		'update_user_id',
+		// 'create_time',
+		// 'create_user_id',
+		// 'update_time',
+		// 'update_user_id',
 	),
 )); 
 

@@ -2,6 +2,7 @@
 
 return array(
 	'user1'=>array(
+		'id' => 1,
 		'email' => 'test1@notaddress.com',
 		'username' => 'Test_User_One',
 		'password' => MD5('test1'),

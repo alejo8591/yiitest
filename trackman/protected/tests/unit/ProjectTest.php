@@ -1,6 +1,12 @@
 <?php
 class ProjectTest extends CDbTestCase
 {
+	public $fixtures=array(
+           'projects'=>'Project',
+           'users'=>'User',
+           'projUsrAssign'=>':tbl_project_user_assignment',
+           'projUserRole'=>':tbl_project_user_role',
+          );
 	/*
 	public function testCRUD() 
 	{ 
@@ -44,7 +50,7 @@ class ProjectTest extends CDbTestCase
 		$deletedProject=Project::model()->findByPk($newProjectId); 
 		$this->assertEquals(NULL,$deletedProject); 
 	}*/
-
+	/*
 	public $fixtures=array(
 		'projects' => 'Project',
 		'users' => 'User',
@@ -105,8 +111,7 @@ class ProjectTest extends CDbTestCase
 		$deletedProject=Project::model()->findByPk($savedProjectId);
 		$this->assertEquals(NULL,$deletedProject);
 	}
-	
-    /*
+
 	public function testGetUserOptions()
 	{
 		$project = $this->projects('project4');
@@ -114,6 +119,14 @@ class ProjectTest extends CDbTestCase
 		$this->assertTrue(is_array($options));
 		$this->assertTrue(count($options) > 0);
 	} */
+
+	public function testUserRoleAssignment()
+	{
+		$project = $this->projects['project3'];
+		$user = $this->users['user1'];
+		$this->assertEquals(1, $project->associateUserToRole('owner', $user->id));
+		// $this->assertEquals(1,$project->removeUserFromRole('owner', $user->id));
+	}
 }
 
 ?>

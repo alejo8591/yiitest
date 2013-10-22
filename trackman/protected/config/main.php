@@ -56,6 +56,16 @@ return array(
 			'password' => 'root',
 			'charset' => 'utf8',
 		),
+
+		// RBAC
+		'authManager'=>array(
+			'class'=>'CDbAuthManager',
+			'connectionID'=>'db',
+			'itemTable'=>'AuthItem',
+            'itemChildTable'=>'AuthItemChild',
+            'assignmentTable'=>'AuthAssignment',
+		),
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

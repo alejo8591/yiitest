@@ -203,7 +203,7 @@ class ProjectController extends Controller
 	{
 		$project = $this->loadModel();
 
-		if(Yii::app()->user->checkAccess('createUser', array('project'=>$project)))
+		if(!Yii::app()->user->checkAccess('createUser', array('project'=>$project)))
 		{
 			throw new CHttpException(403, 'You are not authorized to perform this action.');
 		}

@@ -19,8 +19,7 @@ $this->menu=array(
 if(Yii::app()->user->checkAccess('createUser', array('project'=>$model)))
 {
 	$this->menu[] = array(
-		'label'=>'Add User To Project', 'url'=>array('adduser', 'id'=>$model->id),
-	);
+		'label'=>'Add User To Project', 'url'=>array('adduser', 'id'=>$model->id));
 }
 ?>
 
@@ -32,10 +31,10 @@ if(Yii::app()->user->checkAccess('createUser', array('project'=>$model)))
 		'id',
 		'name',
 		'description',
-		// 'create_time',
-		// 'create_user_id',
-		// 'update_time',
-		// 'update_user_id',
+		'create_time',
+		'create_user_id',
+		'update_time',
+		'update_user_id',
 	),
 )); 
 

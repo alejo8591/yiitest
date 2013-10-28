@@ -26,8 +26,8 @@ EOD;
 		//ensure that an authManager is defined as this is mandatory for creating an auth heirarchy
 		if(($this->_authManager=Yii::app()->authManager)===null)
 		{
-		    echo "Error: an authorization manager, named 'authManager' must be con-figured to use this command.\n";
-			echo "If you already added 'authManager' component in application con-figuration,\n";
+		    echo "Error: an authorization manager, named 'authManager' must be configured to use this command.\n";
+			echo "If you already added 'authManager' component in application configuration,\n";
 			echo "please quit and re-enter the yiic shell.\n";
 			return;
 		}  
@@ -47,20 +47,20 @@ EOD;
 
 			 //create the lowest level operations for users
 			 $this->_authManager->createOperation("createUser","create a new user"); 
-			 $this->_authManager->createOperation("readUser","read user profile in-formation"); 
-			 $this->_authManager->createOperation("updateUser","update a users in-formation"); 
+			 $this->_authManager->createOperation("readUser","read user profile information"); 
+			 $this->_authManager->createOperation("updateUser","update a users information"); 
 			 $this->_authManager->createOperation("deleteUser","remove a user from a project"); 
 
 			 //create the lowest level operations for projects
 			 $this->_authManager->createOperation("createProject","create a new project"); 
-			 $this->_authManager->createOperation("readProject","read project in-formation"); 
+			 $this->_authManager->createOperation("readProject","read project information"); 
 	 		 $this->_authManager->createOperation("updateProject","update project information"); 
-			 $this->_authManager->createOperation("deleteProject","delete a pro-ject"); 
+			 $this->_authManager->createOperation("deleteProject","delete a project"); 
 
 			 //create the lowest level operations for issues
-			 $this->_authManager->createOperation("createIssue","create a new is-sue"); 
-			 $this->_authManager->createOperation("readIssue","read issue informa-tion"); 
-			 $this->_authManager->createOperation("updateIssue","update issue in-formation"); 
+			 $this->_authManager->createOperation("createIssue","create a new issue"); 
+			 $this->_authManager->createOperation("readIssue","read issue information"); 
+			 $this->_authManager->createOperation("updateIssue","update issue information"); 
 			 $this->_authManager->createOperation("deleteIssue","delete an issue from a project");     
 
 			 //create the reader role and add the appropriate permissions as children to this role

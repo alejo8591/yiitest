@@ -61,9 +61,6 @@ return array(
 		'authManager'=>array(
 			'class'=>'CDbAuthManager',
 			'connectionID'=>'db',
-			'itemTable'=>'AuthItem',
-            'itemChildTable'=>'AuthItemChild',
-            'assignmentTable'=>'AuthAssignment',
 		),
 
 		'errorHandler'=>array(

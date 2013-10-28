@@ -2,10 +2,9 @@
 
 return array(
 	'user1'=>array(
-		'id' => 1,
-		'email' => 'test1@notaddress.com',
-		'username' => 'Test_User_One',
-		'password' => MD5('test1'),
+		'email' => 'test1@notanaddress.com',
+		'username' => 'root',
+		'password' => MD5('root'),
 		'last_login_time' => '',
 		'create_time' => '',
 		'create_user_id' => '',
@@ -13,9 +12,9 @@ return array(
 		'update_user_id' => '',
 	),
 	'user2'=>array(
-		'email' => 'test2@notaddress.com',
-		'username' => 'Test_User_Two',
-		'password' => MD5('test2'),
+		'email' => 'test2@notanaddress.com',
+		'username' => 'test',
+		'password' => MD5('test'),
 		'last_login_time' => '',
 		'create_time' => '',
 		'create_user_id' => '',
@@ -23,4 +22,6 @@ return array(
 		'update_user_id' => '',
 	),
 );
-?>
+
+
+

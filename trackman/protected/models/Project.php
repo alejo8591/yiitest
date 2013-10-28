@@ -136,11 +136,13 @@ class Project extends TrackmanActiveRecord
 	 * user's role
 	 */
 
-	public function associateUserToRole($role, $userId)
+	public function associateUserToRole($role, $userId, $projectId)
 	{
-		$sql = "INSERT INTO `tbl_project_user_role`(`project_id`, `user_id`, `role`) VALUES(:projecId, :userId, :role)";
+		$sql = "INSERT INTO `tbl_project_user_role`(`project_id`, `user_id`, `role`) VALUES(:projectId, :userId, :role)";
+		//$sql = "INSERT INTO tbl_project_user_role (project_id, user_id, role) VALUES (:projectId, :userId, :role)";
 		$command = Yii::app()->db->createCommand($sql);
 		$command->bindValue(":projectId", $this->id, PDO::PARAM_INT);
+		// $command->bindValue(":projectId", $projectId, PDO::PARAM_INT);
 		$command->bindValue(":userId", $userId, PDO::PARAM_INT);
 		$command->bindValue(":role", $role, PDO::PARAM_STR);
 		return $command->execute();
@@ -154,6 +156,7 @@ class Project extends TrackmanActiveRecord
 	public function removeUserFromRole($role, $userId)
 	{
 		$sql = "DELETE FROM `tbl_project_user_role` WHERE `project_id`=:projectId AND `user_id`=:userId and `role`=:role";
+		//$sql = "DELETE FROM tbl_project_user_role WHERE project_id=:projectId AND user_id=:userId AND role=:role";
 		$command = Yii::app()->db->createCommand($sql);
 		$command->bindValue(":projectId", $this->id, PDO::PARAM_INT);
 		$command->bindValue(":userId", $userId, PDO::PARAM_INT);
@@ -168,7 +171,8 @@ class Project extends TrackmanActiveRecord
 	 */
 	public function isUserInRole($role)
 	{
-		$sql= "SELECT `role` FROM `tbl_project_user_role` WHERE `project_id`=:projectId AND `user_id`=:userId AND role`=:role";
+		$sql= "SELECT `role` FROM `tbl_project_user_role` WHERE `project_id`=:projectId AND `user_id`=:userId AND `role`=:role";
+		//$sql = "SELECT role FROM tbl_project_user_role WHERE project_id=:projectId AND user_id=:userId AND role=:role";
 		$command = Yii::app()->db->createCommand($sql);
 		$command->bindValue(":projectId", $this->id, PDO::PARAM_INT);
 		$command->bindValue(":userId", Yii::app()->user->getId(), PDO::PARAM_INT);
@@ -192,6 +196,7 @@ class Project extends TrackmanActiveRecord
 	public function associateUserToProject($user)
 	{
 		$sql = "INSERT INTO `tbl_project_user_assignment`(`project_id`, `user_id`) VALUES (:projectId, :userId)";
+		//$sql = "INSERT INTO tbl_project_user_assignment (project_id, user_id) VALUES (:projectId, :userId)";
 		$command = Yii::app()->db->createCommand($sql);
 		$command->bindValue(":projectId", $this->id, PDO::PARAM_INT);
 		$command->bindValue(":userId", $user->id, PDO::PARAM_INT);
@@ -203,13 +208,11 @@ class Project extends TrackmanActiveRecord
 	 */
 	public function isUserInProject($user) 
 	{
-		$sql = "SELECT `user_id` FROM `tbl_project_user_assignment` WHERE `project_id`=:projectId AND user_id`=:userId";
+		$sql = "SELECT `user_id` FROM `tbl_project_user_assignment` WHERE `project_id`=:projectId AND `user_id`=:userId";
+		// $sql = "SELECT user_id FROM tbl_project_user_assignment WHERE project_id=:projectId AND user_id=:userId";
 		$command = Yii::app()->db->createCommand($sql);
 		$command->bindValue(":projectId", $this->id, PDO::PARAM_INT);
 		$command->bindValue(":userId", $user->id, PDO::PARAM_INT);
 		return $command->execute()==1 ? true : false;
 	}
-	
-
-
 }
